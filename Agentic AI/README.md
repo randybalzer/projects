@@ -8,7 +8,7 @@ These examples demonstrate how multi-agent systems can be structured to support 
 
 ## Examples
 
-### 1. `orchestrator_worker_basic.py`
+### 1. `orchestrator_worker.ipynb`
 
 **Description**  
 Demonstrates the **Orchestrator + Worker** pattern. A central Orchestrator coordinates specialized Worker agents to execute different phases of a red team engagement.
@@ -25,7 +25,7 @@ Demonstrates the **Orchestrator + Worker** pattern. A central Orchestrator coord
 - Sequential workflow coordination
 - Clear separation of responsibilities
 
-### 2. `orchestrator_worker_human_in_loop.py`
+### 2. `orchestrator_worker_human_in_loop.ipynb`
 
 **Description**  
 Extends the basic pattern by adding **Human-in-the-Loop (HITL)** oversight. Human approval is required before high-impact phases (Exploitation and Post-Exploitation).
@@ -49,20 +49,10 @@ Real-world red team operations involve multiple distinct phases and require care
 - Python 3.10+
 - Google Gemini API key (via Google AI Studio)
 - Required packages:
-  ```bash
-  pip install langgraph langchain-google-genai langchain
 
-## How to Run
-The examples are structured as modular Jupyter/Colab notebooks for clarity:
-Bash# Run in Google Colab or Jupyter
-# Execute cells in order: Cell 1 → Cell 2 → Cell 3 → Cell 4 → Cell 5
-Each example is broken into clear sections:
-
-Package installation
-API key loading
-Tool and agent definition
-Execution of red team phases
-
+```bash
+pip install langgraph langchain-google-genai langchain
+```
 **Randy Balzer**  
 Cybersecurity AI/ML Engineer & Ph.D. Candidate (Cyber Operations)  
 
