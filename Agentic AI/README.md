@@ -53,6 +53,21 @@ Real-world red team operations involve multiple distinct phases and require care
 ```bash
 pip install langgraph langchain-google-genai langchain
 ```
+
+## How to Run
+These examples are provided as Jupyter notebooks (.ipynb) and are designed to run in Google Colab or Jupyter.
+Recommended approach:
+
+# Open the notebook in Google Colab:
+* Run the cells in order (Cell 1 → Cell 2 → Cell 3 → Cell 4 → Cell 5)
+
+Each notebook is broken into clear, modular sections:
+
+* Package installation
+* API key loading (using Colab Secrets)
+* Tool and agent definition
+* Execution of red team phases
+
 **Randy Balzer**  
 Cybersecurity AI/ML Engineer & Ph.D. Candidate (Cyber Operations)  
 
