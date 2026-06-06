@@ -1,10 +1,10 @@
-# Agentic AI for Red Teaming – Educational Examples
+# Agentic AI for Red Teaming – Examples
 
-This repository contains clean, educational examples of **Agentic AI architectures** applied to cybersecurity, with a focus on **AI-assisted Red Teaming** and **Human-in-the-Loop (HITL)** design patterns.
+This repository contains clean, examples of **Agentic AI architectures** applied to cybersecurity, with a focus on **AI-assisted Red Teaming** and **Human-in-the-Loop (HITL)** design patterns.
 
 ## Overview
 
-These examples demonstrate how multi-agent systems can be structured to support red team operations. They are designed to be simple, readable, and suitable for technical discussion in interviews and professional settings.
+These examples demonstrate how multi-agent systems can be structured to support red team operations. They are designed to be simple, readable, and suitable for technical discussion.
 
 ## Examples
 
