@@ -58,7 +58,7 @@ pip install langgraph langchain-google-genai langchain
 These examples are provided as Jupyter notebooks (.ipynb) and are designed to run in Google Colab or Jupyter.
 Recommended approach:
 
-# Open the notebook in Google Colab:
+### Open the notebook in Google Colab:
 * Run the cells in order (Cell 1 → Cell 2 → Cell 3 → Cell 4 → Cell 5)
 
 Each notebook is broken into clear, modular sections:
