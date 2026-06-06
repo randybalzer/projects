@@ -51,3 +51,20 @@ Real-world red team operations involve multiple distinct phases and require care
 - Required packages:
   ```bash
   pip install langgraph langchain-google-genai langchain
+
+## How to Run
+The examples are structured as modular Jupyter/Colab notebooks for clarity:
+Bash# Run in Google Colab or Jupyter
+# Execute cells in order: Cell 1 → Cell 2 → Cell 3 → Cell 4 → Cell 5
+Each example is broken into clear sections:
+
+Package installation
+API key loading
+Tool and agent definition
+Execution of red team phases
+
+**Randy Balzer**  
+Cybersecurity AI/ML Engineer & Ph.D. Candidate (Cyber Operations)  
+
+- GitHub: [randybalzer](https://github.com/randybalzer/projects)
+- LinkedIn: [randy-balzer-509a283](https://www.linkedin.com/in/randy-balzer-509a283)
