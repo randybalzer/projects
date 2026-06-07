@@ -1,90 +1,83 @@
-# Agentic AI for Red Teaming – Examples
+# Agentic AI for Red Teaming and Defensive Security Automation
 
-This repository contains clean, examples of **Agentic AI architectures** applied to cybersecurity, with a focus on **AI-assisted Red Teaming** and **Human-in-the-Loop (HITL)** design patterns.
+This repository contains two complementary Jupyter notebooks demonstrating practical use of **agentic AI** in cybersecurity:
 
-## Overview
+1. **Red Team Engagement Simulator** (`orchestrator_worker_human_in_loop.ipynb`)
+2. **Defensive C2 Anomaly Detection Agent** (`defensive_c2_anomaly_agent.ipynb`)
 
-These examples demonstrate how multi-agent systems can be structured to support red team operations. They are designed to be simple, readable, and suitable for technical discussion.
+Both examples use the **Orchestrator + Worker** pattern with **Human-in-the-Loop (HITL)** oversight and integrate with the **MITRE ATT&CK** framework.
 
-## Examples
+---
 
-### 1. `orchestrator_worker.ipynb`
+## 1. Red Team Engagement Simulator (Human-in-the-Loop)
 
-**Description**  
-Demonstrates the **Orchestrator + Worker** pattern. A central Orchestrator coordinates specialized Worker agents to execute different phases of a red team engagement.
+**File:** `orchestrator_worker_human_in_loop.ipynb`
 
-**Phases**
-- Reconnaissance
-- Exploitation Simulation
-- Post-Exploitation Simulation
-- Reporting
+This notebook simulates a controlled red team engagement using a multi-agent system. It demonstrates how agentic workflows can structure and document offensive security activities in a repeatable, auditable way.
 
-**Key Concepts**
-- Agent specialization
-- Task decomposition
-- Sequential workflow coordination
-- Clear separation of responsibilities
+**Key Features:**
+- Orchestrator + Worker architecture
+- Human approval gates between phases (Recon → Exploitation → Post-Exploitation → Reporting)
+- MITRE ATT&CK technique mapping with hyperlinks
+- Built with LangChain + OpenAI
 
-### 2. `orchestrator_worker_human_in_loop.ipynb`
+**Relevance:** Shows practical understanding of building AI tooling to support red team operations, adversarial emulation, and security automation.
 
-**Description**  
-Extends the basic pattern by adding **Human-in-the-Loop (HITL)** oversight. Human approval is required before high-impact phases (Exploitation and Post-Exploitation).
+---
 
-**Key Features**
-- Two explicit human approval gates
-- Contextual reporting based on actual execution results
-- Responsible automation design
+## 2. Defensive C2 Anomaly Detection Agent
 
-**Key Concepts**
-- Human-in-the-Loop design patterns
-- Risk-aware automation
-- Human oversight in offensive security workflows
+**File:** `defensive_c2_anomaly_agent.ipynb`
 
-### 3. `defensive_c2_anomaly_agent.ipynb`
+This notebook demonstrates a lightweight defensive agent that enriches security alerts and requires human approval before taking action (e.g., notifying the SOC team). It is designed as a complement to traditional ML-based detection (such as K-Means clustering for C2 beaconing).
 
-**Description**  
-Demonstrates a **defensive security automation agent** using the Human-in-the-Loop pattern. It automatically enriches high-severity alerts (such as potential C2 beaconing) with threat intelligence and requires explicit human approval before notifying the security team.
+**Key Features:**
+- Two specialized agents (enrichment + notification)
+- Human-in-the-Loop approval before sending notifications
+- MITRE ATT&CK mapping (T1071.001)
+- Simple and extensible design
 
-**Key Features**
-- Alert enrichment with threat context and MITRE ATT&CK mapping
-- Human approval gate before sending notifications
-- Designed to reduce alert fatigue while maintaining analyst oversight
+**Relevance:** Illustrates how agentic AI can be applied to defensive security operations, alert triage, and automated notification workflows with human oversight.
 
-**Key Concepts**
-- Defensive agentic automation
-- Human-in-the-Loop decision control
-- Connection to existing ML-based C2 detection pipelines
+---
 
-## Why These Patterns Matter
+## How the Two Notebooks Work Together
 
-Real-world red team operations involve multiple distinct phases and require careful control. These examples show how AI agents can be organized to mirror professional methodologies while maintaining modularity and human oversight — a critical consideration when deploying agentic systems in security contexts.
+| Aspect                    | Red Team Notebook                          | Defensive Notebook                          |
+|---------------------------|--------------------------------------------|---------------------------------------------|
+| **Focus**                 | Offensive / Adversarial emulation          | Defensive / Alert response                  |
+| **Pattern**               | Orchestrator + multiple specialized workers| Two specialized agents                      |
+| **Human Oversight**       | Approval between major phases              | Approval before sending notifications       |
+| **MITRE ATT&CK**          | Multiple techniques across phases          | Single technique (T1071.001)                |
+| **Use Case**              | Red team tooling & simulation              | Security automation & SOC support           |
 
-## Requirements
+Together they show a balanced view of how agentic AI can be applied across both offensive and defensive cybersecurity workflows.
 
-- Python 3.10+
-- Google Gemini API key (via Google AI Studio)
-- Required packages:
+---
 
+## Running the Notebooks
+
+### Requirements
 ```bash
-pip install langgraph langchain-google-genai langchain
+pip install langgraph langchain-openai langchain
 ```
 
-## How to Run
-These examples are provided as Jupyter notebooks (.ipynb) and are designed to run in Google Colab or Jupyter.
-Recommended approach:
+### API Key
+Both notebooks expect an OPENAI_API_KEY environment variable (or Colab secret).
+#### Execution
 
-### Open the notebook in Google Colab:
-* Run the cells in order (Cell 1 → Cell 2 → Cell 3 → Cell 4 → Cell 5)
+* Run cells sequentially.
+* Human input is required at approval gates.
 
-Each notebook is broken into clear, modular sections:
+## Future Improvements / Known Limitations
 
-* Package installation
-* API key loading (using Colab Secrets)
-* Tool and agent definition
-* Execution of red team phases
+* Phase 2 technique selection in the red team notebook can be further refined for accuracy and consistency.
+* Both examples currently use simulated actions. Future versions could integrate real tools or APIs in a safe, controlled environment.
+* The defensive notebook is intentionally lightweight and can be extended to work alongside existing ML detection pipelines (e.g., K-Means C2 beaconing).
 
-**Randy Balzer**  
-Cybersecurity AI/ML Engineer & Ph.D. Candidate (Cyber Operations)  
 
-- GitHub: [randybalzer](https://github.com/randybalzer/projects)
-- LinkedIn: [randy-balzer-509a283](https://www.linkedin.com/in/randy-balzer-509a283)
+## Repository Structure
+
+* orchestrator_worker_human_in_loop.ipynb – Red team engagement simulator
+* defensive_c2_anomaly_agent.ipynb – Defensive C2 anomaly agent (OpenAI version)
+* README.md – This file
