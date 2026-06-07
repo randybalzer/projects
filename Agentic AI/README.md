@@ -40,6 +40,21 @@ Extends the basic pattern by adding **Human-in-the-Loop (HITL)** oversight. Huma
 - Risk-aware automation
 - Human oversight in offensive security workflows
 
+### 3. `defensive_c2_anomaly_agent.ipynb`
+
+**Description**  
+Demonstrates a **defensive security automation agent** using the Human-in-the-Loop pattern. It automatically enriches high-severity alerts (such as potential C2 beaconing) with threat intelligence and requires explicit human approval before notifying the security team.
+
+**Key Features**
+- Alert enrichment with threat context and MITRE ATT&CK mapping
+- Human approval gate before sending notifications
+- Designed to reduce alert fatigue while maintaining analyst oversight
+
+**Key Concepts**
+- Defensive agentic automation
+- Human-in-the-Loop decision control
+- Connection to existing ML-based C2 detection pipelines
+
 ## Why These Patterns Matter
 
 Real-world red team operations involve multiple distinct phases and require careful control. These examples show how AI agents can be organized to mirror professional methodologies while maintaining modularity and human oversight — a critical consideration when deploying agentic systems in security contexts.
