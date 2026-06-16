@@ -1,4 +1,4 @@
-# Agentic AI for Red Teaming and Defensive Security Automation
+# Agentic AI for Defensive Security Automation
 
 This repository contains two complementary Jupyter notebooks demonstrating practical use of **agentic AI** in cybersecurity:
 
