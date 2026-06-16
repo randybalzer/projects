@@ -25,21 +25,6 @@ This notebook simulates a controlled red team engagement using a multi-agent sys
 
 ---
 
-## 2. Defensive C2 Anomaly Detection Agent
-
-**File:** `defensive_c2_anomaly_agent.ipynb`
-
-This notebook demonstrates a lightweight defensive agent that enriches security alerts and requires human approval before taking action (e.g., notifying the SOC team). It is designed as a complement to traditional ML-based detection (such as K-Means clustering for C2 beaconing).
-
-**Key Features:**
-- Two specialized agents (enrichment + notification)
-- Human-in-the-Loop approval before sending notifications
-- MITRE ATT&CK mapping (T1071.001)
-- Simple and extensible design
-
-**Relevance:** Illustrates how agentic AI can be applied to defensive security operations, alert triage, and automated notification workflows with human oversight.
-
----
 
 ## How the Two Notebooks Work Together
 
