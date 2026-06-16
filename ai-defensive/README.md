@@ -9,23 +9,7 @@ Both examples use the **Orchestrator + Worker** pattern with **Human-in-the-Loop
 
 ---
 
-## 1. Red Team Engagement Simulator (Human-in-the-Loop)
-
-**File:** `orchestrator_worker_human_in_loop.ipynb`
-
-This notebook simulates a controlled red team engagement using a multi-agent system. It demonstrates how agentic workflows can structure and document offensive security activities in a repeatable, auditable way.
-
-**Key Features:**
-- Orchestrator + Worker architecture
-- Human approval gates between phases (Recon → Exploitation → Post-Exploitation → Reporting)
-- MITRE ATT&CK technique mapping with hyperlinks
-- Built with LangChain + OpenAI
-
-**Relevance:** Shows practical understanding of building AI tooling to support red team operations, adversarial emulation, and security automation.
-
----
-
-## 2. Defensive C2 Anomaly Detection Agent
+## 1. Defensive C2 Anomaly Detection Agent
 
 **File:** `defensive_c2_anomaly_agent.ipynb`
 
