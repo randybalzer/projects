@@ -2,10 +2,9 @@
 
 This repository contains two complementary Jupyter notebooks demonstrating practical use of **agentic AI** in cybersecurity:
 
-1. **Red Team Engagement Simulator** (`orchestrator_worker_human_in_loop.ipynb`)
-2. **Defensive C2 Anomaly Detection Agent** (`defensive_c2_anomaly_agent.ipynb`)
+1. **Defensive C2 Anomaly Detection Agent** (`defensive_c2_anomaly_agent.ipynb`)
 
-Both examples use the **Orchestrator + Worker** pattern with **Human-in-the-Loop (HITL)** oversight and integrate with the **MITRE ATT&CK** framework.
+Example use the **Orchestrator + Worker** pattern with **Human-in-the-Loop (HITL)** oversight and integrate with the **MITRE ATT&CK** framework.
 
 ---
 
